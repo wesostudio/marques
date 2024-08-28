@@ -1,0 +1,75 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "user": "admin",
+    "password": "adminpassword",
+    "database_name": "inventory_db"
+  },
+  "app_settings": {
+    "theme": "light",
+    "language": "en",
+    "timezone": "UTC",
+    "currency": "ARS"
+  },
+  "user_management": {
+    "roles": ["admin", "manager", "staff"],
+    "permissions": {
+      "admin": ["create", "read", "update", "delete"],
+      "manager": ["read", "update"],
+      "staff": ["read"]
+    }
+  },
+  "inventory_settings": {
+    "default_category": "general",
+    "low_stock_threshold": 10,
+    "enable_auto_restock": true,
+    "auto_restock_level": 50
+  },
+  "notification_settings": {
+    "email": {
+      "enabled": true,
+      "smtp_server": "smtp.example.com",
+      "smtp_port": 587,
+      "username": "email@example.com",
+      "password": "emailpassword"
+    },
+    "sms": {
+      "enabled": false,
+      "api_endpoint": "https://sms.api.example.com",
+      "api_key": "smsapikey"
+    }
+  },
+  "integration_settings": {
+    "payment_gateway": {
+      "provider": "Stripe",
+      "api_key": "stripeapikey"
+    },
+    "shipping_service": {
+      "provider": "FedEx",
+      "api_key": "fedexapikey"
+    }
+  },
+  "security_settings": {
+    "enable_encryption": true,
+    "encryption_key": "s3cur3k3y",
+    "access_control": {
+      "max_login_attempts": 5,
+      "lockout_duration": 30
+    }
+  },
+  "reporting_settings": {
+    "default_report_format": "pdf",
+    "enable_scheduled_reports": true,
+    "report_schedule": {
+      "daily": true,
+      "weekly": true,
+      "monthly": true
+    }
+  },
+  "localization": {
+    "language": "en",
+    "date_format": "YYYY-MM-DD",
+    "time_format": "HH:mm:ss"
+  }
+}
